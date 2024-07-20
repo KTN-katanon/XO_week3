@@ -38,8 +38,8 @@ public class OXLab3Test {
 
    @Test
    public void swapTurn_X_O(){
-       char turn = 'X';
-       char result = OXLab3.swapTurn(turn);
+       char currentPlayer = 'X';
+       char result = OXLab3.swapTurn(currentPlayer);
        assertEquals('O', result);
    }
    
@@ -50,5 +50,12 @@ public class OXLab3Test {
        assertEquals('X', result);
    }
    
-   
+   @Test
+   public void checkWinner_Row1_true_byX(){
+        char[][] board = {{'X', 'X', 'X'}, {'-', '-', '-'}, {'-', '-', '-'}};
+        char currentPlayer = 'X';
+        boolean result = OXLab3.checkWinner(board, currentPlayer);
+        assertTrue(result);
+   }
+
 }
