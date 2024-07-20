@@ -11,13 +11,14 @@ import java.util.*;
 
 public class OXLab3 {
 
-    private final static int SIZE = 3;
-    private static char[][] board = new char[SIZE][SIZE];
-    private static char currentPlayer = 'X';
-    private static Scanner sc = new Scanner(System.in);
+    public final static int SIZE = 3;
+    public static char[][] board = new char[SIZE][SIZE];
+    public static char currentPlayer = 'X';
+    public static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         currentPlayer = swapTurn(currentPlayer);
+        createBoard();
 //        while (true) {
 //
 //            printWelcome();
@@ -140,9 +141,9 @@ public class OXLab3 {
 //        return false;
 //    }
 
-    public static boolean playAgain() {
+    public static boolean playAgain(String play) {
         System.out.println("Do you want to play again? (y/n, other to no): ");
-        String play = sc.next().trim().toLowerCase();
+//        String play = sc.next().trim().toLowerCase();
         if (play.equals("yes") || play.equals("y")) {
             currentPlayer = 'X';
             return true;
