@@ -65,4 +65,13 @@ public class OXLab3Test {
         boolean result = OXLab3.checkWinner(board, currentPlayer);
         assertTrue(result);
    }
+   
+   @Test
+   public void checkWinner_Row3_true_byX(){
+        char[][] board = {{'-', '-', '-'}, {'-', '-', '-'},{'X', 'X', 'X'}};
+        char currentPlayer = 'X';
+        boolean result = OXLab3.checkWinner(board, currentPlayer);
+        assertTrue(result);
+   }
+
 }
