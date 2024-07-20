@@ -149,4 +149,11 @@ public class OXLab3Test {
         boolean result = OXLab3.checkDraw(board);
         assertTrue(result);
    }
+   
+   @Test
+   public void playAgain_yes_true(){
+       String play = "yes";
+       boolean result = OXLab3.playAgain(play);
+       assertTrue(result);
+   }
 }
