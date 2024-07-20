@@ -143,6 +143,10 @@ public class OXLab3Test {
         boolean result = OXLab3.checkWinner(board, currentPlayer);
         assertFalse(result);
    }
-
-   
+   @Test
+   public void checkDraw_boardFull_true(){
+        char[][] board = {{'O', 'X', 'O'}, {'O', 'X', 'O'}, {'X', 'O', 'X'}};  
+        boolean result = OXLab3.checkDraw(board);
+        assertTrue(result);
+   }
 }
