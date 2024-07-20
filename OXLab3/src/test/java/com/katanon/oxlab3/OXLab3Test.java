@@ -156,4 +156,12 @@ public class OXLab3Test {
        boolean result = OXLab3.playAgain(play);
        assertTrue(result);
    }
+   
+   @Test
+   public void playAgain_no_true(){
+       String play = "no";
+       boolean result = OXLab3.playAgain(play);
+       assertFalse(result);
+   }
+
 }
