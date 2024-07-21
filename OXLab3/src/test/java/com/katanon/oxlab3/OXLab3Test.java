@@ -114,6 +114,22 @@ public class OXLab3Test {
    }
    
    @Test
+   public void checkWinner_Diag1_true_byO(){
+        char[][] board = {{'O','-', '-'}, {'-', 'O', '-'},{'-','-','O'}};
+        char currentPlayer = 'O';
+        boolean result = OXLab3.checkWinner(board, currentPlayer);
+        assertTrue(result);
+   }
+   
+   @Test
+   public void checkWinner_Diag2_true_byO(){
+        char[][] board = {{'-','-', 'O'}, {'-', 'O', '-'},{'O','-', '-'}};
+        char currentPlayer = 'O';
+        boolean result = OXLab3.checkWinner(board, currentPlayer);
+        assertTrue(result);
+   }
+   
+   @Test
    public void checkWinner_Row1_false_byX(){
         char[][] board = {{'X', 'X', '-'}, {'-', '-', '-'}, {'-', '-', '-'}};
         char currentPlayer = 'X';
